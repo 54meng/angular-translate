@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="lib/angular/angular.js" ></script>
+		<script type="text/javascript" src="lib/angular/angular-translate.min.js"></script>
+		<script type="text/javascript" src="lib/angular/angular-translate-loader-static-files.min.js"></script>
+		<script type="text/javascript" src="js/demo.js" ></script>
+	</head>
+
+	<body ng-controller="mainController">
+		<div class="btn-group">
+			<button type="button" class="btn btn-info" ng-click="togglelang()">{{lang}}</button>
+		</div>
+		{{'name' | translate}}
+	</body>
+
+</html>

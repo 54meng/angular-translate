@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="lib/angular/angular.js"></script>
+		<script type="text/javascript" src="lib/angular/angular-translate.min.js" ></script>
+		<script type="text/javascript" src="lib/angular/angular-translate-loader-static-files.min.js" ></script>
+	</head>
+
+	<body>
+    <div>
+        <h1>{{ 'TITLE' | translate }}</h1>
+        <span translate="FOO"></span>
+    </div>
+    <script type="text/javascript">
+    var app = angular.module("MyApp",['pascalprecht.translate']);
+    
+    app.config(['$translateProvider',function($translateProvider){
+          $translateProvider.translations('en',{
+            'TITLE':'Hello',
+            'FOO':'This is a paragraph'
+        });
+     
+          $translateProvider.translations('zh',{
+            'TITLE':'你好',
+            'FOO':'这是一幅图'
+        });
+     
+          $translateProvider.preferredLanguage('zh');
+    }]);
+    </script>
+</body>
+
+</html>

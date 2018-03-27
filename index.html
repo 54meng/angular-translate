@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>angular翻译</title>
+		<script type="text/javascript" src="lib/angular/angular.js"></script>
+		<script type="text/javascript" src="lib/angular/angular-translate.min.js" ></script>
+		<script type="text/javascript" src="lib/angular/angular-translate-loader-static-files.min.js" ></script>
+		<script type="text/javascript" src="js/app.js" ></script>
+		<script type="text/javascript" src="js/langController.js" ></script>
+		<script type="text/javascript" src="js/T.js" ></script>
+	</head>
+
+	<body>
+		<div>
+			<h1>{{ 'name' | translate }}</h1>
+		</div>
+		
+		<select class="language-switching" ng-controller="langCtrl" ng-model="cur_lang" ng-change="switching(cur_lang)">
+			<option value="en">English</option>
+			<option value="cn">简体中文</option>
+		</select>
+		
+	</body>
+
+</html>
